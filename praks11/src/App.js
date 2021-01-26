@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './index.css'
 import {BrowserRouter, Switch, Route, Link, useParams } from "react-router-dom";
-
+import Recipe from "./components/Recipe";
+import RecipeList from "./components/RecipeList";
 const App = () => {
   
   const [recipes, setRecipes] = useState([]);  
@@ -48,46 +49,5 @@ const App = () => {
 
 
 
-    
-
-const RecipeList = ({recipe}) => {
-  return(
-      <div>  
-         {recipe.map((recipe, index) => {
-             return (
-                 <div class="recipe">
-                     <h2>{recipe.name}</h2>
-                      <p class ="text-center">{recipe.duration} min</p>
-                      <Link class ="link-center" to={`/recipes/${index}`}>Vaata lähemalt</Link>
-                      
-                    
-                 </div>
-             )
-         })}
-      </div>
-
-  )
-}
-
-
-const Recipe = ({recipes}) => {
-  const id = useParams().id;
-      console.log(recipes)
-      return (
-        <div class="recipe-box">
-             <Link to={`/`} class="return">tagasi</Link>
-              <h2>{recipes[id].name}</h2>
-              <p>{recipes[id].duration} min</p>
-              <ul>
-     {recipes[id].ingredients.map((ingredient, index) => {
-       return <li key={ingredient}>{ingredient}</li>;
-     })}
-   </ul>
-   
-              <p>{recipes[id].preparation}</p>
-        </div>
-      )
-    }
-  
   
 export default App;

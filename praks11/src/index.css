@@ -25,3 +25,19 @@ code {
   padding-top: 9px;
   font-size: large;
 }
+
+.link-center {
+  margin:auto;
+  margin-left:1%;
+  padding-top: 3px;
+  font-size: large;
+}
+
+.return {
+  font-size:large;
+  margin-top: 10px !important;
+}
+
+.recipe-box {
+  margin-left: 10px;
+}

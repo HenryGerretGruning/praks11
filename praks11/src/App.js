@@ -40,8 +40,8 @@ const App = () => {
     <BrowserRouter>
    <Switch>
      <Route path="/" exact>
-       <h1>Retseptiraamat</h1>
-       <Link to={`/NewRecipe`} className="new-recipe">Lisa uus retsept</Link>
+       <h1 class ="center-page">Retseptiraamat</h1>
+       <Link to={`/NewRecipe`} className="link-align">Lisa uus retsept</Link>
        <RecipeList recipe={recipes} />
      </Route>
      <Route path="/recipes/:id">

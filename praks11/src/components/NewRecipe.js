@@ -38,7 +38,7 @@ const NewRecipe = (props) => {
         <div>
             
             <h1>Lisa uus retsept</h1>
-            <Link to={`/`} class="return">Tagasi</Link>
+            <Link to={`/`} class="return">TAGASI</Link>
             <form class= "newrecipebox" onSubmit={event => combineRecipe(event)}>
                 <label for="name" className="input-name">Nimi</label>
 

@@ -8,7 +8,7 @@ const RecipeList = ({ recipe }) => {
     <div class="recipe-collection">
       {recipe.map((recipe, index) => {
         return (
-          <div class="recipe">
+          <div class="recipe-list">
             <h2>{recipe.name}</h2>
             <p class="text-center">{recipe.duration} min</p>
             <Link class="return" class="link-center" to={`/recipes/${index}`}>

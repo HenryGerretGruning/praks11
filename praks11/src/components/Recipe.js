@@ -7,7 +7,7 @@ const Recipe = ({recipes, props}) => {
         console.log(recipes)
         return (
           <div class="recipe-box">
-               <Link to={`/`} class="return">tagasi</Link>
+               <Link to={`/`} class="return">TAGASI</Link>
                
                 <h2>{recipes[id].name}</h2>
                 <p>{recipes[id].duration} min</p>

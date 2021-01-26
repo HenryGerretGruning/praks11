@@ -25,6 +25,10 @@ const App = () => {
     getRecipes();
   },[]);
 
+  recipes.sort((a, b) => (a.duration > b.duration) ? 1 : -1)
+
+  console.log(recipes)
+
 
   function addRecipe(newRecipe) {console.log(newRecipe)
     newRecipe.id = recipes.length

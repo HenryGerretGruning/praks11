@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter, Link, useParams } from "react-router-dom";
 
 
-const Recipe = ({recipes}) => {
+const Recipe = ({recipes, props}) => {
     const id = useParams().id;
         console.log(recipes)
         return (

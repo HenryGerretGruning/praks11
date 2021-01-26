@@ -18,6 +18,7 @@ code {
   flex-direction: row;
   margin:auto;
   
+  
 }
 
 .text-center {
@@ -36,8 +37,46 @@ code {
 .return {
   font-size:large;
   margin-top: 10px !important;
+  background-color: rgb(101, 98, 228);
+  color: white;
+  border-radius: 10%;
+  margin-left: 2%;
+  padding: 1%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  width:30px;
+}
+.recipe-collection {
+  margin-left: 10px;
+  width: 30%;
+  box-shadow:10px 10px 10px grey;  
+  margin-top: 30px;
 }
 
 .recipe-box {
+  
   margin-left: 10px;
+  width: 30%;
+  margin-top: 30px;
+}
+
+.recipe{
+  margin-top: 10px;
+}
+
+.newrecipebox {
+ display:flex;
+ flex-direction: column;
+ width: 40%;
+ 
+ padding: 2%;
+}
+
+input{
+  
+  margin-top: 10px;
+}
+
+.submit{
+  box-shadow:10px 10px 10px grey;  
 }

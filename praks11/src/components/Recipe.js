@@ -8,6 +8,7 @@ const Recipe = ({recipes}) => {
         return (
           <div class="recipe-box">
                <Link to={`/`} class="return">tagasi</Link>
+               
                 <h2>{recipes[id].name}</h2>
                 <p>{recipes[id].duration} min</p>
                 <ul>

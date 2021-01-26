@@ -25,22 +25,29 @@ const App = () => {
     getRecipes();
   },[]);
 
+
+  function addRecipe(newRecipe) {console.log(newRecipe)
+    newRecipe.id = recipes.length
+    console.log(newRecipe)
+    setRecipes(recipes.concat([newRecipe]));
+  }
+
   return (
-    
     <BrowserRouter>
    <Switch>
      <Route path="/" exact>
        <h1>Retseptiraamat</h1>
+       <Link to={`/NewRecipe`} className="new-recipe">Lisa uus retsept</Link>
        <RecipeList recipe={recipes} />
      </Route>
      <Route path="/recipes/:id">
        <Recipe recipes={recipes} />
      </Route>
-        
-     
+     <Route path= "/NewRecipe" exact>
+       <NewRecipe addRecipe={addRecipe}/>
+     </Route>
    </Switch>
  </BrowserRouter>
-
   )
 }
 

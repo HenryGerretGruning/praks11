@@ -1,37 +1,33 @@
 import React, { useState, useEffect } from 'react'
-
+import './index.css'
+import { BrowserRouter, Switch, Route, Link, useParams } from "react-router-dom";
 
 const App = () => {
   
-  const [recipes , setRecipes] = useState(0);
-  useEffect(() => {
-    getRecipes();
-  }, []);
-
-  function getRecipes(){
+  const [recipes, setRecipes] = useState([]);  
+  function getRecipes() {
     fetch("data/data.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
     })
-    .then((response) => {console.log(response)
-
-        return response.json();
+    .then((response) => {console.log(response);
+      return response.json();
     })
-      // response.text() returns a new promise that resolves with the full response text
-      // when it loads
     .then((data) => {
-
       setRecipes(data);
-    })
+    })  
   }
-  
+  useEffect(() => {
+    getRecipes();
+  },[]);
+
   return (
     
     <main>
       <h1>Retseptiraamat</h1>
-      <RecipeList recipes={recipes}></RecipeList>
+      <RecipeList recipe={recipes}/>
       
     </main>
   )
@@ -41,39 +37,43 @@ const App = () => {
 
 
 
-const Recipe = (props) => {
-  
-  return(
-    
+const Recipe = (recipe) => {
+  return (
     <div>
-      <h1>smile</h1>
-      
-      <h2>{props.recipe.name} </h2>
-      <p> {props.recipe.duration} </p>
-      
-      <p>{props.recipe.preparation}</p>
+      {recipe.map((recipe, index) => {
+        return (
+          <div class="recipe">
+            <h2>{recipe.name}</h2>
+            <p>{recipe.duration}</p>
+            <ul>
+              {recipe.ingredients.map((ingredient, index) => {
+                return <li key={ingredient}>{ingredient}</li>;
+              })}
+            </ul>
+            <p>{recipe.preparation}</p>
+          </div>
+        );
+      })}
     </div>
-    
-  )
-}
+  );
+};
 
-const RecipeList = (props) => {
-  console.log(props.recipes)
-  const recipes = props.recipes
-
+const RecipeList = ({recipe}) => {
   return(
-    
-      <div>
-        
-       <div>
-
-        <h2> </h2>
-        <p>  </p>
-
-       </div>
-
+      <div >  
+         {recipe.map((recipe, index) => {
+             return (
+                 <div class="recipe">
+                     <h2>{recipe.name}</h2>
+                      <p class ="text-center">{recipe.duration} min</p>
+            
+                      
+                    
+                 </div>
+             )
+         })}
       </div>
-    
+
   )
 }
 

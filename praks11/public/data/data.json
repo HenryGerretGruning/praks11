@@ -1,6 +1,7 @@
 [
-  {
+  { 
     "name": "Kanapasta",
+    "tags": ["pastaroad", "argitoidud"],
     "duration": 20,
     "ingredients": [
       "kana 500g",
@@ -11,9 +12,10 @@
     ],
     "preparation": "Keeda makaronid vastavalt paki peal olevale juhisele. Prae kana õlis. Maitsesta see soola ja pipraga. Lisa kana keedetud makaronidele ning lisa toidukoor ja basiilik. Hoia paar minutit madalal tulel kuni koor on kergelt keema läinud."    
   },
-  
   {
+  
     "name": "Mozzarellasalat",
+    "tags": ["salat", "vegan"],
     "duration": 10,
     "ingredients": [
       "mozzarella 250g",

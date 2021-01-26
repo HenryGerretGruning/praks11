@@ -3,6 +3,7 @@ import './index.css'
 import {BrowserRouter, Switch, Route, Link, useParams } from "react-router-dom";
 import Recipe from "./components/Recipe";
 import RecipeList from "./components/RecipeList";
+import NewRecipe from "./components/NewRecipe";
 const App = () => {
   
   const [recipes, setRecipes] = useState([]);  

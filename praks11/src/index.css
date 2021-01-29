@@ -106,3 +106,10 @@ input{
 .submit{
   box-shadow:10px 10px 10px grey;  
 }
+
+.tags {
+  opacity:0.58;
+  color: blue;
+  margin: auto;
+  
+}

@@ -10,6 +10,7 @@ const RecipeList = ({ recipe }) => {
         return (
           <div class="recipe-list">
             <h2>{recipe.name}</h2>
+            <p className="tags">{recipe.tags[0]}, {recipe.tags[1]}</p>
             <p class="text-center">{recipe.duration} min</p>
             <Link class="return" class="link-center" to={`/recipes/${index}`}>
               Vaata lähemalt

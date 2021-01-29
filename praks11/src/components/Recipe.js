@@ -16,7 +16,11 @@ const Recipe = ({recipes, props}) => {
          return <li key={ingredient}>{ingredient}</li>;
        })}
      </ul>
-     
+     <ul>
+   {recipes[id].tags.map((tags) => {
+     return <li key={tags}>{tags}</li>;
+   })}
+ </ul>
                 <p>{recipes[id].preparation}</p>
           </div>
         )
